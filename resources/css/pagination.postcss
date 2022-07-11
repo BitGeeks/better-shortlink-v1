@@ -1,0 +1,59 @@
+/** External **/
+
+.pagination:not(.pagination-embed) {
+    @apply flex mb-6;
+}
+
+.pagination:not(.pagination-embed) > :not(template) + :not(template) {
+    @apply ml-2;
+}
+
+.pagination:not(.pagination-embed) > .page-link {
+    @apply flex items-center px-4 py-2 rounded-lg text-gray-600 cursor-pointer transition ease-in-out duration-100;
+}
+
+.pagination:not(.pagination-embed) > .page-link.disabled {
+    @apply text-gray-500 cursor-default;
+}
+
+.pagination:not(.pagination-embed) > .page-link.disabled:hover {
+    @apply bg-transparent;
+}
+
+.pagination:not(.pagination-embed) > .page-link:hover {
+    @apply bg-gray-50;
+}
+
+.pagination:not(.pagination-embed) > .page-link.active {
+    @apply bg-white;
+}
+
+/** Embed **/
+
+.pagination.pagination-embed {
+    @apply flex rounded-lg border border-gray-300 overflow-hidden;
+}
+
+.pagination.pagination-embed > :not(template) + :not(template) {
+    @apply border-l border-gray-300;
+}
+
+.pagination.pagination-embed > .page-link {
+    @apply flex items-center px-4 py-2 text-gray-600 cursor-pointer transition ease-in-out duration-100;
+}
+
+.pagination.pagination-embed > .page-link:hover {
+    @apply bg-gray-100;
+}
+
+.pagination.pagination-embed > .page-link.active {
+    @apply bg-gray-100;
+}
+
+.pagination.pagination-embed > .page-link.disabled {
+    @apply cursor-default;
+}
+
+.pagination.pagination-embed > .page-link.disabled:hover {
+    @apply bg-white;
+}
